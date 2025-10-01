@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ProMotors - Auto Service</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 2rem;
+      background: #111;
+      color: #fff;
+      position: relative;
+    }
+
+    header .logo img {
+      height: 60px;
+    }
+
+    nav.nav-desktop ul {
+      display: flex;
+      list-style: none;
+      gap: 1.5rem;
+    }
+
+    nav.nav-desktop ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+    }
+
+    .call-btn {
+      background: #e63946;
+      padding: 0.5rem 1rem;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+      margin-left: 1rem;
+    }
+
+    /* Hamburger button */
+    .menu-toggle {
+      display: none;
+      font-size: 2rem;
+      background: none;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    /* Side menu */
+    .side-menu {
+      position: fixed;
+      top: 0;
+      right: -250px;
+      width: 250px;
+      height: 100%;
+      background: #111;
+      color: #fff;
+      padding: 2rem 1rem;
+      transition: right 0.3s ease;
+      z-index: 1000;
+    }
+
+    .side-menu ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 2rem;
+    }
+
+    .side-menu ul li {
+      margin: 1.2rem 0;
+    }
+
+    .side-menu ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.2rem;
+    }
+
+    .side-menu .close-btn {
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 2rem;
+      float: right;
+      cursor: pointer;
+    }
+
+    .side-menu.active {
+      right: 0;
+    }
+
+    /* Hero Section */
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 3rem 2rem;
+      gap: 2rem;
+    }
+
+    .hero-video {
+      flex: 1;
+      min-height: 300px;
+    }
+
+    .hero-video video {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .hero-right {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .hero-right img {
+      max-width: 100%;
+    }
+
+    .btn {
+      background: #e63946;
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 1rem;
+    }
+
+    /* Stats Section */
+    .stats {
+      display: flex;
+      justify-content: space-around;
+      padding: 2rem;
+      background: black;
+      flex-wrap: wrap;
+    }
+
+    .stat {
+      text-align: center;
+      margin: 1rem;
+    }
+
+    /* Services */
+    .services {
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .service-icons {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    /* Footer */
+    footer {
+      background: #111;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav.nav-desktop,
+      .call-btn {
+        display: none;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .hero {
+        flex-direction: column;
+        padding: 2rem 1rem;
+      }
+
+      .hero-right {
+        margin-top: 1.5rem;
+      }
+
+      .stats {
+        flex-direction: column;
+      }
+
+      .service-icons {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="images/acoautomotive logo.png" alt="ProMotors Logo">
+    </div>
+
+    <!-- Desktop Nav -->
+    <nav class="nav-desktop">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="#">Contacts</a></li>
+      </ul>
+    </nav>
+
+    <!-- <a href="tel:+123456789" class="call-btn">+123 45 67 789</a> -->
+
+    <!-- Hamburger Button -->
+    <button class="menu-toggle">☰</button>
+  </header>
+
+  <!-- Mobile Side Menu -->
+  <div class="side-menu" id="sideMenu">
+    <button class="close-btn">&times;</button>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="#">Shop</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">Contacts</a></li>
+    </ul>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-video">
+      <video autoplay muted loop>
+        <source src="images/car lighting.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <div class="hero-right">
+      <div class="hero-text">
+        <h1>Auto Maintenance & Repair Service</h1>
+        <p>We can handle any car problem with expert technicians and top-notch service.</p>
+        <button class="btn">Get Service</button>
+      </div>
+      <div class="hero-img">
+        <img src="assets/images/car.png" alt="Car Service">
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="stats">
+    <div class="stat"><h2>8K+</h2><p>Happy Clients</p></div>
+    <div class="stat"><h2>22+</h2><p>Years of Experience</p></div>
+    <div class="stat"><h2>500+</h2><p>Projects Done</p></div>
+    <div class="stat"><h2>99%</h2><p>Satisfaction Rate</p></div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services">
+    <h2>Auto Detail Supplies & Car Care</h2>
+    <p>High-quality parts and supplies for all your vehicle needs.</p>
+    <button class="btn">Shop Now</button>
+    <div class="service-icons">
+      <div>🛠️ Schedule Appointment</div>
+      <div>💰 Money Saving Promotions</div>
+      <div>⭐ Customer Reviews</div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 ProMotors. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    // Mobile Menu Toggle
+    const menuToggle = document.querySelector('.menu-toggle');
+    const sideMenu = document.getElementById('sideMenu');
+    const closeBtn = document.querySelector('.close-btn');
+
+    menuToggle.addEventListener('click', () => {
+      sideMenu.classList.add('active');
+    });
+
+    closeBtn.addEventListener('click', () => {
+      sideMenu.classList.remove('active');
+    });
+  </script>
+</body>
+</html>

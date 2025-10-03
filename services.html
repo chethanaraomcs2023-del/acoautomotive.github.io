@@ -54,6 +54,41 @@
       margin-left: 1rem;
     }
 
+        .contact-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: linear-gradient(90deg, #3b82f6, #2563eb);
+      color: #fff;
+      padding: 14px 20px;
+      border-radius: 50px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .contact-float:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+    }
+
+    .contact-float span.icon {
+      display: inline-flex;
+      width: 22px;
+      height: 22px;
+      background: white;
+      color: #2563eb;
+      border-radius: 50%;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 14px;
+    }
     /* Hamburger button */
     .menu-toggle {
       display: none;
@@ -234,9 +269,9 @@
     <!-- Desktop Nav -->
     <nav class="nav-desktop">
       <ul>
-        <li><a href="#">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="services.html">Services</a></li>
-        <li><a href="#">Contacts</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
 
@@ -272,7 +307,7 @@
     </div>
 
     <div class="service-card">
-      <img src="images/spareparts.png" alt="OEM Spare Parts">
+      <img src="images/OEMspareparts.jpg" alt="OEM Spare Parts">
       <h3>OEM Spare Parts</h3>
       <p>Only genuine parts. No shortcuts. No compromises.</p>
     </div>
@@ -288,7 +323,7 @@
 
 
     <div class="service-card">
-      <img src="images/insurancerenewal.png" alt="Insurance Renewal">
+      <img src="images/renewal.png" alt="Insurance Renewal">
       <h3>Insurance Renewal</h3>
       <p>Quick. Easy. On point. Get your coverage without the chaos.</p>
     </div>
@@ -327,7 +362,10 @@
     </div>
 
     <div class="service-card">
-      <img src="images/Cleaning.jpg" alt="Upholstery Cleaning">
+       <video autoplay muted loop>
+        <source src="images/cleaning.mp4" type="video/mp4">
+      </video>
+      <!-- <img src="images/Cleaning.jpg" alt="Upholstery Cleaning"> -->
       <h3>Upholstery Cleaning</h3>
       <p>Spill-proof vibes. Seats so fresh, you’ll forget what happened last weekend.</p>
     </div>
@@ -347,18 +385,24 @@
     </div>
 
     <div class="service-card">
-      <img src="images/Scanning.png" alt="ECU Scanning">
+      <img src="images/ecu.jpg" alt="ECU Scanning">
       <h3>ECU Scanning</h3>
       <p>Tech check? We speak your car’s language fluently.</p>
     </div>
 
     <div class="service-card">
-      <img src="images/drop.jpg" alt="Free Pick & Drop">
+      <img src="images/pickupdrop.png" alt="Free Pick & Drop">
       <h3>Free Pick & Drop</h3>
       <p>Doorstep service with style. Convenience meets quality.</p>
     </div>
   </section>
+<div>
+    <a href="contact.html" class="contact-float">
+    <span class="icon">✉</span>
+    Contact Us
+  </a>
 
+</div>
   <!-- Footer -->
   <footer>
     <p>© 2025 ACO Automotive. Keep it clean, keep it classy.</p>
